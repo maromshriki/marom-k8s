@@ -1,0 +1,15 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: wordpress
+  labels:
+    release: my-monitoring
+spec:
+  selector:
+    matchLabels:
+      app: wordpress
+  endpoints:
+  - port: http
+    path: /metrics
+
