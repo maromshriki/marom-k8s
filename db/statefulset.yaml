@@ -13,6 +13,8 @@ spec:
       labels:
         app: wordpress-db
     spec:
+      imagePullSecrets:
+        - name: ecr-creds
       containers:
       - name: mariadb
         image: 992382545251.dkr.ecr.us-east-1.amazonaws.com/marom/mariadb
