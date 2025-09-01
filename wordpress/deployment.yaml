@@ -12,6 +12,8 @@ spec:
       labels:
         app: wordpress
     spec:
+      imagePullSecrets:
+        - name: ecr-cred
       containers:
       - name: wordpress
         image: 992382545251.dkr.ecr.us-east-1.amazonaws.com/marom/wordpress
