@@ -1,20 +1,24 @@
 # marom-k8s
 בתוך תיקיית wordpress-k8s:
 
+צריך להץחבר לecr
+
 צור את ה‑Secrets:
 
-kubectl apply -f secrets.yaml
+kubectl apply -f secret.yaml
 
 
 צור את מסד הנתונים (Service + StatefulSet):
 
 kubectl apply -f db/service.yaml
+
 kubectl apply -f db/statefulset.yaml
 
 
 צור את WordPress (Service + Deployment):
 
 kubectl apply -f wordpress/service.yaml
+
 kubectl apply -f wordpress/deployment.yaml
 
 
